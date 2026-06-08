@@ -88,7 +88,7 @@ do_patch(
 
 do_patch(
 	"Re-enable Ctrl+Shift+Alt+S menu",
-	/this\....\....\s*\&\&\s*this\.toggle\(\);/,
+	/this\....\....\s*\&\&\s*this\.toggle\(\)/,
 	"this.toggle();");
 
 // run our patched copy of playercore

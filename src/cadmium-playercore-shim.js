@@ -3,7 +3,7 @@ console.log("Hello, I am running instead of playercore");
 
 var my_config = {
 	"use_VP9": false,
-	"use_5.1": false,
+	"use_5.1": true,
 	"set_max_bitrate": true,
 }
 
@@ -82,13 +82,13 @@ do_patch(
 
 do_patch(
 	"Custom profile group",
-	/(name:"default",profiles:)./,
+	/(name:"default",.profiles:)./s,
 	"$1 get_profile_list()"
 );
 
 do_patch(
 	"Re-enable Ctrl+Shift+Alt+S menu",
-	/this\...\....\s*\&\&\s*this\.toggle\(\);/,
+	/this\....\....\s*\&\&\s*this\.toggle\(\);/,
 	"this.toggle();");
 
 // run our patched copy of playercore

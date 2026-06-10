@@ -3,7 +3,7 @@ console.log("Hello, I am running instead of playercore");
 
 var my_config = {
 	"use_VP9": false,
-	"use_5.1": true,
+	"use_5.1": false,
 	"set_max_bitrate": true,
 }
 
